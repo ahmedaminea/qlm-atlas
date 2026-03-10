@@ -8,26 +8,44 @@ QLM Atlas Studio is a template-driven editorial cartography video generator buil
 - D3-geo + SVG map primitives
 - JSON fixtures + folder-based style packages
 
-## MVP Status
-This repository ships:
-- Project dashboard scaffold and guided MVP workflow blocks
-- Folder-based style package system (5 built-in styles)
-- Strongly typed project/script/theme models + zod schemas
-- Scene library primitives and reusable editorial components
-- AI assist architecture modules (`briefInterpreter`, `templateSelector`, `scenePlanner`, `visualStyleSuggester`, `labelWriter`)
-- 3 required fixture projects
-- First working vertical slice: Venezuela country profile (16:9 preview + Remotion export command)
+## What is actually working end-to-end
+- Next.js app boot (`npm run dev`) with fixture-backed project dashboard scaffolding.
+- In-app preview using Remotion Player for the seeded Venezuela vertical slice.
+- Remotion Studio (`npm run remotion:studio`) for composition inspection.
+- Remotion render (`npm run remotion:render`) to produce a real MP4 at `out/video.mp4`.
 
-## Run
+## What is scaffold-only in this MVP
+- Some scene types are architecture-ready but still visually simplified (`region_focus`, `city_marker`, advanced `comparison_simple` variants, richer flow cartography).
+- Export API route is a queue stub and does not yet orchestrate background workers.
+- AI assist modules are deterministic local stubs for structured draft generation (no LLM backend wired yet).
+
+## Happy-path verification steps (clean environment)
 ```bash
+# 1) Install dependencies
 npm install
+
+# 2) Start web app
 npm run dev
+# Open http://localhost:3000
+
+# 3) Open Remotion Studio (separate terminal)
+npm run remotion:studio
+# Should open the QlmAtlasVideo composition
+
+# 4) Render MP4 (separate terminal)
+npm run remotion:render
+# Expected output file: out/video.mp4
+
+# 5) Verify output exists
+ls -lh out/video.mp4
 ```
 
-Open `http://localhost:3000`.
-
-## Export MP4
+## Project commands
 ```bash
+npm run dev
+npm run lint
+npm run typecheck
+npm run remotion:studio
 npm run remotion:render
 ```
 
