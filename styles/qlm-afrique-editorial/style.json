@@ -1,0 +1,22 @@
+{
+  "id": "qlm-afrique-editorial",
+  "label": "QLM Afrique Editorial",
+  "defaultPalette": "default",
+  "defaultIconSet": "qlm-core",
+  "defaultTypographyPack": "qlm-sans",
+  "mapStyle": {
+    "sea": "flat",
+    "land": "flat",
+    "borders": "sharp",
+    "coastlineWidth": 1.2,
+    "internalBorderWidth": 0.8,
+    "highlightMode": "fill",
+    "allowTexture": false
+  },
+  "motion": {
+    "zoomStyle": "smooth",
+    "labelFadeFrames": 8,
+    "statCardAnim": "fade-up",
+    "flowAnim": "draw"
+  }
+}

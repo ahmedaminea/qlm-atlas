@@ -1,0 +1,39 @@
+{
+  "id": "fixture_ramadan_series_arab_world",
+  "title": "Les séries du Ramadan dans le monde arabe",
+  "brand": "qlm-afrique",
+  "locale": "fr",
+  "ratio": "16:9",
+  "targetDurationSec": 60,
+  "template": "geopolitical_issue",
+  "styleId": "qlm-afrique-editorial",
+  "paletteId": "culture",
+  "iconSetId": "qlm-core",
+  "typographyPackId": "qlm-sans",
+  "editorialAngle": "Comparer la production ramadanesque par pays puis zoomer sur l’Égypte",
+  "geography": { "scope": "multi_country", "countries": ["EGY", "SAU", "ARE", "TUN", "DZA", "MAR", "LBN", "JOR", "IRQ", "SYR"] },
+  "facts": [
+    { "label": "Studios", "value": "...", "icon": "tv" },
+    { "label": "Audience", "value": "...", "icon": "population" },
+    { "label": "Volume annuel", "value": "...", "icon": "media" }
+  ],
+  "metrics": [
+    { "id": "series_count", "label": "Nombre de séries", "type": "bar_chart" },
+    { "id": "avg_episodes", "label": "Épisodes moyens par série", "type": "bar_chart" }
+  ],
+  "sources": [{ "label": "QLM Research", "year": 2024 }],
+  "scenes": [
+    { "id": "s1", "type": "intro_title", "durationInFrames": 90, "props": {} },
+    { "id": "s2", "type": "continent_highlight", "durationInFrames": 120, "props": {} },
+    { "id": "s3", "type": "comparison_simple", "durationInFrames": 120, "props": { "metric": "series_count" } },
+    { "id": "s4", "type": "comparison_simple", "durationInFrames": 120, "props": { "metric": "avg_episodes" } },
+    { "id": "s5", "type": "country_focus", "durationInFrames": 120, "props": { "country": "EGY" } },
+    { "id": "s6", "type": "stats_overlay", "durationInFrames": 120, "props": {} },
+    { "id": "s7", "type": "outro_sources", "durationInFrames": 90, "props": {} }
+  ],
+  "script": {
+    "meta": { "title": "Les séries du Ramadan dans le monde arabe", "template": "geopolitical_issue", "ratio": "16:9", "locale": "fr" },
+    "editorial": { "angle": "Comparer la production TV", "keyMessage": "L’Égypte reste un pôle central.", "sources": ["QLM Research"] },
+    "scenes": [{ "type": "intro_title", "screenText": "Les séries du Ramadan" }]
+  }
+}

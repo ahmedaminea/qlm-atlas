@@ -1,0 +1,45 @@
+{
+  "id": "fixture_venezuela_gdp_oil",
+  "title": "Le Venezuela en 3 chiffres",
+  "brand": "qlm-tn",
+  "locale": "fr",
+  "ratio": "16:9",
+  "targetDurationSec": 45,
+  "template": "country_profile",
+  "styleId": "qlm-tn-editorial",
+  "paletteId": "economy",
+  "iconSetId": "qlm-core",
+  "typographyPackId": "qlm-sans",
+  "editorialAngle": "Présenter le pays à travers ses indicateurs économiques et pétroliers",
+  "geography": { "scope": "country", "countryCode": "VEN" },
+  "facts": [
+    { "label": "PIB", "value": "$XXX Md", "year": 2024, "icon": "economy" },
+    { "label": "PIB par habitant", "value": "$XXX", "year": 2024, "icon": "population" },
+    { "label": "Production pétrolière", "value": "XXX kb/j", "year": 2024, "icon": "oil" }
+  ],
+  "sources": [
+    { "label": "World Bank", "year": 2024 },
+    { "label": "IMF", "year": 2024 },
+    { "label": "OPEC", "year": 2024 }
+  ],
+  "scenes": [
+    { "id": "s1", "type": "intro_title", "durationInFrames": 120, "props": {} },
+    { "id": "s2", "type": "world_highlight", "durationInFrames": 120, "props": { "highlightCountry": "VEN" } },
+    { "id": "s3", "type": "country_focus", "durationInFrames": 150, "props": { "country": "VEN" } },
+    { "id": "s4", "type": "stats_overlay", "durationInFrames": 120, "props": {} },
+    { "id": "s5", "type": "outro_sources", "durationInFrames": 90, "props": {} }
+  ],
+  "script": {
+    "meta": { "title": "Le Venezuela en 3 chiffres", "template": "country_profile", "ratio": "16:9", "locale": "fr" },
+    "editorial": {
+      "angle": "Montrer le poids économique et pétrolier du Venezuela à travers 3 indicateurs",
+      "keyMessage": "Le pays reste fortement défini par son économie pétrolière",
+      "sources": ["World Bank", "IMF", "OPEC"]
+    },
+    "scenes": [
+      { "type": "intro_title", "screenText": "Le Venezuela en 3 chiffres" },
+      { "type": "world_highlight", "map": { "highlightCountry": "VEN" } },
+      { "type": "country_focus", "map": { "country": "VEN" }, "stats": [{ "label": "PIB", "value": "$XXX Md", "icon": "economy" }] }
+    ]
+  }
+}

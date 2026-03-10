@@ -1,0 +1,37 @@
+{
+  "id": "fixture_china_sea_trade_flows",
+  "title": "La Chine et l’Asie du Sud-Est : des échanges massifs",
+  "brand": "custom",
+  "locale": "fr",
+  "ratio": "16:9",
+  "targetDurationSec": 50,
+  "template": "trade_flow_explainer",
+  "styleId": "neutral-documentary",
+  "paletteId": "trade",
+  "iconSetId": "generic-outline",
+  "typographyPackId": "qlm-sans",
+  "editorialAngle": "Visualiser les flux commerciaux entre la Chine et les pays d’Asie du Sud-Est",
+  "geography": { "scope": "regional_flow", "countries": ["CHN", "VNM", "THA", "MYS", "IDN", "PHL", "SGP", "KHM", "LAO", "MMR"] },
+  "facts": [
+    { "label": "Flux max", "value": "230 USD bn", "icon": "trade" },
+    { "label": "Pays concernés", "value": "10", "icon": "shipping" }
+  ],
+  "flows": [
+    { "from": "VNM", "to": "CHN", "value": 230 },
+    { "from": "THA", "to": "CHN", "value": 135 },
+    { "from": "MYS", "to": "CHN", "value": 190 }
+  ],
+  "sources": [{ "label": "UN Comtrade", "year": 2024 }],
+  "scenes": [
+    { "id": "s1", "type": "intro_title", "durationInFrames": 90, "props": {} },
+    { "id": "s2", "type": "continent_highlight", "durationInFrames": 120, "props": {} },
+    { "id": "s3", "type": "flow_arrows", "durationInFrames": 150, "props": {} },
+    { "id": "s4", "type": "stats_overlay", "durationInFrames": 120, "props": {} },
+    { "id": "s5", "type": "outro_sources", "durationInFrames": 90, "props": {} }
+  ],
+  "script": {
+    "meta": { "title": "La Chine et l’Asie du Sud-Est : des échanges massifs", "template": "trade_flow_explainer", "ratio": "16:9", "locale": "fr" },
+    "editorial": { "angle": "Flux régionaux", "keyMessage": "Les échanges avec la Chine structurent la région.", "sources": ["UN Comtrade"] },
+    "scenes": [{ "type": "flow_arrows", "screenText": "Flux commerciaux" }]
+  }
+}
